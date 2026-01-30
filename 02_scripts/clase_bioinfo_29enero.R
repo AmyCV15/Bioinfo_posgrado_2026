@@ -1,5 +1,7 @@
 #Clase 1 bioinfo 29 de enero
 datos <- rnorm(1:1000)
+datos2 <- rnorm(1:1500)
+hist(datos2)
 
 pdf("03_results/mi_histograma.pdf")
 hist(datos, col = "blue")
