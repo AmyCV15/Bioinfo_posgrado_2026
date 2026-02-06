@@ -100,10 +100,22 @@ mean(edades_compañeros)
 median(edades_compañeros)
 sd(edades_compañeros)
 length(edades_compañeros)
-sort(edades_compañeros)
+edades_compañeros_orden <- sort(edades_compañeros)
+edades_compañeros_orden
+#
 any(edades_compañeros == edades_compañeros)
 which(edades_compañeros == edades_compañeros)
-??impair #####################################################################################################
+#
+#evidentemente esto no me está dando lo que necesito porque la lógica con la
+#cual funcionan es diferente.
+edades_impar <- edades_compañeros[edades_compañeros %% 2 != 0]
+edades_impar
+# lo que hace el paso anterior es dividir cada componente del vector en 2, 
+#si el residuo de la división es 0, significa que el número puede divirse en dos sin problema 
+#(sin numeros decimales), por lo que es número par. Si el residuo de la división es mayor a 0,
+#quiere decir que no es un numero par. Esto lo investigué en la red, cabe aclarar.
+
+
 # Elimina el máximo y el mínimo y con el vector resultante realiza un histograma.
 edades_compañeros <- sort(edades_compañeros)
 edades_compañeros_hist<- edades_compañeros[-c(1, 10)] 
@@ -124,8 +136,32 @@ especies_AccNum
 #número de estudiantes que cumplen años cada mes.
 meses_cumpleaños <- c("Febrero", "Marzo", "Abril", "Abril", "Junio", "Julio", "Marzo", "Septiembre", "Octubre", 
           "Noviembre", "Octubre")
-meses_completos <- c("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
-                     "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
 as.factor(meses_cumpleaños)
-table(meses_cumpleaños)
-table(meses_cumpleaños, levels(meses_completos))
+numero_estudiantes_cada_mes <- table(meses_cumpleaños)
+numero_estudiantes_cada_mes
+
+##### 15. 
+virus_nombres <- c("Influenza A", "Influenza B", "Norovirus", "VPH", "Varicela-Zoster", "Herpes simple",
+                   "Rotavirus", "VSR", "Epstein Barr", "Adenovirus")
+acc_num <- c("GCA_000865725.1", "GCA_000820495.2", "GCA_000864005.1", "GCA_001274345.1", "GCA_000858285.1", 
+             "GCA_000859985.2", "GCA_000880735.1", "GCA_964661075.1", "GCA_002402265.1", "GCA_025630205.1	")
+tamaño_genomas <- c(13600, 14500, 7700, 7300, 124900, 152200, 18600, 15200, 171800, 36000)
+
+names(acc_num) <- virus_nombres
+acc_num
+names(tamaño_genomas) <- virus_nombres 
+tamaño_genomas
+tamaño_genomas[which(tamaño_genomas > 300)]
+#lo haré con mayores y menores a 8000 para que no sea un vector vacío
+menores <- tamaño_genomas[which(tamaño_genomas < 8000)]
+menores
+mayores <- tamaño_genomas[which(tamaño_genomas  > 8000)]
+mayores
+hist(tamaño_genomas)
+boxplot(tamaño_genomas) #así me genera una sola caja, puesto que es únicamente
+                        #un cojunto de datos y realiza los cálculos con ese conjunto de datos.
+boxplot(tamaño_genomas ~ virus_nombres) #utilizando la fórmula de esta manera
+                                        #ya me muestra todos los virus diferentes,
+                                        #pero no puede hacer los cálculos 
+                                        #que se representan en un boxplot
+                                     
