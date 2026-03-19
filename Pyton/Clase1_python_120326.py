@@ -187,7 +187,7 @@ print(f"Volumen de la esfera = {volumen_esfera:.4f}cm^3")
 #
 # Presentalo en una tabla formateada con f-strings
 # Alineá los números a la derecha con 2 decimales
-km = 50
+km = 25
 metros = km *1000
 centimetros = metros * 100
 millas = km/1.60934
