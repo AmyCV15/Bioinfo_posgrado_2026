@@ -187,7 +187,7 @@ print(f"Volumen de la esfera = {volumen_esfera:.4f}cm^3")
 #
 # Presentalo en una tabla formateada con f-strings
 # Alineá los números a la derecha con 2 decimales
-km = 12
+km = 20
 metros = km *1000
 centimetros = metros * 100
 millas = km/1.60934
@@ -234,7 +234,9 @@ print(f"Capital inicial: ${capital_inicial}, con una tasa anual de {tasa_anual},
 print(f"Con los siguientes resultados:")
 print(f"{'Monto final = ':<12} {monto_final:>14}")  #por que en la segunda parte no se vuelve a usar ' ' 
 print(f"{'Ganancia = ':<12} {ganancia:>18}")
-print(f"{'Rendimiento = ':<12} {rendimiento:>14}") #como funciona la primer espaciada?
+print(f"{'Rendimiento = ':<12} {rendimiento:>14}")
+
+#como funciona la primer espaciada?
 
 
 ###Desafíos ####
