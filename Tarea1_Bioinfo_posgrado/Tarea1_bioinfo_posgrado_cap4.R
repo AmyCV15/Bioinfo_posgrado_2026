@@ -91,6 +91,7 @@ promedio <- c(mean(expresion_genica[1, ]), mean(expresion_genica[2, ]), mean(exp
               mean(expresion_genica[4, ]), mean(expresion_genica[5, ]),mean(expresion_genica[6, ])
               )
 promedio
+#param mucho más fácil
 apply(expresion_genica, 1, mean)
 
 

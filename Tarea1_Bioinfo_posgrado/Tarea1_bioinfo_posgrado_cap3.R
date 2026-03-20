@@ -83,7 +83,7 @@ edades_sMorty
 ##### 12. ¿Hay alguna edad que sea mayor de 75? ¿Menor de 12? ¿Entre 12 y 20?
 any(edades > 60)
 any(edades < 12)
-any(edades >= 12); any(edades <= 20)
+any(edades >= 12); any(edades <= 20) #puede usar el comando & también 
 
 ###### Tamaños de genomas ####
 #13. Generar vector de edades de 10 compañeros, asígnales nombre.
@@ -165,3 +165,15 @@ boxplot(tamaño_genomas ~ virus_nombres) #utilizando la fórmula de esta manera
                                         #pero no puede hacer los cálculos 
                                         #que se representan en un boxplot
                                      
+
+##clase del 12/02/26 #####
+
+##para nivel de expresion:
+expresion_genes <-runif(5, 0, 1000 )
+expresion_genes[expresion_genes>60]
+which(expresion_genes>60)
+
+##
+#Abundancia de especies 
+abundancia <- sample(1:100, 20, replace = TRUE)
+#asignales nombres
