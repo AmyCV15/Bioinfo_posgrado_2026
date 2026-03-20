@@ -240,4 +240,62 @@ print(f"{'Rendimiento = ':<12} {rendimiento:>14}")
 
 
 ###Desafíos ####
+#Desafío 1 — Segundos en el Universo" 
+#La edad estimada del universo es 13.8 mil millones de años. Calculá cuántos segundos tiene el 
+#universo. Hint: 1 año ≈ 365.25 días (incluir años bisiestos) Mostrá el resultado en 
+#notación científica con 3 decimales:
+#si cada día tiene 86400 segundos...
+segundos_año = 86400
+edad_mundo = 13800000000
+edad_mundo_segundos = edad_mundo * segundos_año
+print(f"La edad del mundo en segundos es {edad_mundo_segundos:.3e}")
 
+#Desafío 2 — Precisión Arbitraria" Calculá 2**1000 y factorial(50) en Python. 
+#Comparalo mentalmente con R: en R, 2^1000 retorna Inf en modo double. 
+#Python maneja enteros de precisión ilimitada. ¿Cuántos dígitos tiene 2**1000? 
+#Usá len(str(2**1000)). :::  
+2**1000
+#se puede con la liberia math
+math.factorial(50) 
+len(str(2**1000))  #me dice la longitud de dicho "vector" (que no es vector, solo la indicación
+                   #de la operación)
+
+#Desafío 3
+#Extendé el mini proyecto de inversión para mostrar el valor del capital al final 
+#de cada año (5 líneas), calculando manualmente para t=1, t=2, ..., t=5. 
+#Formatéalo como tabla con columnas: Año | Capital | Ganancia | Rendimiento %
+nombre_inversor = "Amairani Chávez"
+capital_inicial = 10000     # pesos
+tasa_anual = 0.08      # 8% anual
+n_composicion = 12        # mensual
+años = 5
+
+# Cálculo
+monto_final = capital_inicial * (1 + tasa_anual / n_composicion) ** (n_composicion * años)
+ganancia    = monto_final - capital_inicial
+rendimiento = (ganancia / capital_inicial) * 100
+monto_final_t1 = capital_inicial * (1 + tasa_anual / n_composicion) ** (n_composicion * 1)
+monto_final_t2 = capital_inicial * (1 + tasa_anual / n_composicion) ** (n_composicion * 2)
+monto_final_t3 = capital_inicial * (1 + tasa_anual / n_composicion) ** (n_composicion * 3)
+monto_final_t4 = capital_inicial * (1 + tasa_anual / n_composicion) ** (n_composicion * 4)
+ganancia_t1    = monto_final_t1 - capital_inicial
+ganancia_t2    = monto_final_t2 - capital_inicial
+ganancia_t3    = monto_final_t3 - capital_inicial
+ganancia_t4   = monto_final_t4 - capital_inicial
+rendimiento_t1 = (ganancia_t1 / capital_inicial) * 100
+rendimiento_t2 = (ganancia_t2 / capital_inicial) * 100
+rendimiento_t3 = (ganancia_t3 / capital_inicial) * 100
+rendimiento_t4 = (ganancia_t4 / capital_inicial) * 100
+print("=" * 80)
+print(f"{'Reporte de inversión simple de':^50} {nombre_inversor}")
+print("=" * 80)
+print(f"Capital inicial: ${capital_inicial}, con una tasa anual de {tasa_anual}, proyectado a {años} años")
+print(f"Con los siguientes resultados:")
+print(f"{'Monto final en el  = ':<12} {monto_final:>14}")
+print(f"Para cada año se obtienen los siguientes datos: ")
+print("=" * 80)
+print(f"Año 1 | Capital final ${monto_final_t1:.2f} | Ganancia real ${ganancia_t1:.2f} | Rendimiento {rendimiento_t1:.2f}%")
+print(f"Año 2 | Capital final ${monto_final_t2:.2f} | Ganancia real ${ganancia_t2:.2f} | Rendimiento {rendimiento_t2:.2f}%")
+print(f"Año 3 | Capital final ${monto_final_t3:.2f} | Ganancia real ${ganancia_t3:.2f} | Rendimiento {rendimiento_t3:.2f}%")
+print(f"Año 4 | Capital final ${monto_final_t4:.2f} | Ganancia real ${ganancia_t4:.2f} | Rendimiento {rendimiento_t4:.2f}%")
+print(f"Año 5 | Capital final ${monto_final:.2f} | Ganancia real ${ganancia:.2f} | Rendimiento {rendimiento:.2f}%")
