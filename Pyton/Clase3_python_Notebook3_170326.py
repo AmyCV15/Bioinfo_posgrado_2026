@@ -68,7 +68,6 @@ temperaturas.index(temp_max)
 print(f"El {dias[5]} fue el día con la mayor temperatura de la semana con {temp_max}°C")
 # d) ¿Cuál fue el promedio de la semana? (redondea a 1 decimal)
 temp_alta = temperaturas.sort()
-dias_temp = dias[0]+temperaturas[0]
 sumatoria = sum(temperaturas) / len(temperaturas)
 print(f"El promedio de temperaturas de la semana fue de {sumatoria:.1f}°C")
 import statistics
@@ -153,7 +152,7 @@ mediana = len(numeros_ordenados)//2
 print(mediana) #esto me da 2, es decir, la posición 2 de la lista de núemeros.
 #RECUERDA: que en pyton, el primer número se considera como posición 0...
 #Aquí no hay numeros repetidos, pero si quisiéramos hacer eso:
-#conteo = ()
+#conteo = []
 #for n in numeros:
  #   if n in conteo:
         conteo[n] = conteo[n] + 1
@@ -161,12 +160,9 @@ print(mediana) #esto me da 2, es decir, la posición 2 de la lista de núemeros.
     #    conteo[n] = 1
 
 #print(conteo)
-#Según la IA esta sería la solución, pero marca el error que el objeto numero es inmutable
-#pero es una lista que sí puede recibir cambios...
-############# PREGUNTA DE CLASE ################ 
 
 
-#2. Eliminar duplicados manualmente"} Dada la lista [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5], 
+#2. Eliminar duplicados manualmente: Dada la lista [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5], 
 #elimina todos los duplicados preservando el orden de primera aparición. Solo puedes 
 #usar operaciones de lista, no set(). Muestra cuántos elementos únicos hay 
 lista_numeros =[3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
