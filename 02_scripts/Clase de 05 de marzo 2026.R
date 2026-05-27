@@ -1,5 +1,7 @@
 ######
 ### Clase de 05 de marzo 2026 ######
+
+
 # IF
 #Ejercicio 1. 
 #Elabora un programa que compare tu estatura con tu ídolx y determine si eres más altx.
