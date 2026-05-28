@@ -299,3 +299,4 @@ print(f"Año 2 | Capital final ${monto_final_t2:.2f} | Ganancia real ${ganancia_
 print(f"Año 3 | Capital final ${monto_final_t3:.2f} | Ganancia real ${ganancia_t3:.2f} | Rendimiento {rendimiento_t3:.2f}%")
 print(f"Año 4 | Capital final ${monto_final_t4:.2f} | Ganancia real ${ganancia_t4:.2f} | Rendimiento {rendimiento_t4:.2f}%")
 print(f"Año 5 | Capital final ${monto_final:.2f} | Ganancia real ${ganancia:.2f} | Rendimiento {rendimiento:.2f}%")
+#
